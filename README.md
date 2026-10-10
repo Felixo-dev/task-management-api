@@ -65,7 +65,30 @@ Replace `USERNAME` and `PASSWORD` with your PostgreSQL credentials. Use a strong
 
 **Security:** Never commit your `.env` file or expose your database password or JWT secret publicly.
 
-### 4. Run the API
+
+### 4. Set Up the Database
+
+Make sure PostgreSQL is running and the database specified in `DATABASE_URL` already exists.
+
+CREATE DATABASE task_management;
+
+Generate the Prisma Client:
+
+```bash
+npx prisma generate
+```
+
+Apply the database migrations:
+
+```bash
+npx prisma migrate deploy
+```
+
+These commands generate the Prisma Client and apply the existing migrations to the configured database.
+
+### 5. Run the API
+
+Start the development server:
 
 ```bash
 npm run dev
