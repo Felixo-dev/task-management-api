@@ -22,9 +22,4 @@ app.use("/api/tasks", taskRoutes);
 //error handler
 app.use(errorHandler);
 
-
-const PORT = 3000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+export default app;
