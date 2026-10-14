@@ -35,8 +35,10 @@ export const registerUser = async (
   ) {
     throw new AppError("Email already registered", 409);
   }
+    throw error;
 }
  
+
 };
 //login a user
 export const loginUser = async (
